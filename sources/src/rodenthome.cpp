@@ -178,7 +178,7 @@ void SetRodentHomeDir() {
     // RodentHomeDirWStr = ...
     
 #elif defined (ANDROID)
-    RodentHomeDirWStr = L"";
+    RodentHomeDirWStr = Str2WStr(GetEnv("RODENT4HOME"));
 
     CheckRodentHome(L"/sdcard/Rodent4/");
     CheckRodentHome(L"/sdcard/Android/data/ccc.chess.engines/files/");
